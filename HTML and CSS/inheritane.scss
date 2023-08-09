@@ -1,0 +1,14 @@
+%message{
+    font-family: "sane-serif";
+    color: "blue"
+}
+
+.success{
+    @extend %message;
+    background-color: "green";
+}
+
+.error{
+    @extend %message;
+    background-color: "orange";
+}

@@ -29,3 +29,47 @@
   - font: 
 
 - , is a multiple selector
+
+- We can idntify an element in HTML using 4 ways:
+  - id (#name)
+  - class (.name)
+  - span
+  - div
+  
+- In case of style clash between id and class, the following preference order based on specificity is used:
+  - inline
+  - id
+  - class
+  - type (eg. h1)
+
+- More CSS selectors:
+  - Descendants
+  - Hover (this is awesome!)
+
+### Responsive Design
+- ViewPort: Specify visual settings based on devices
+```html
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+```
+
+- Media Queries
+  - Type of browser/page may change the experiences
+  - Eg. change properties depending on window width
+
+- FlexBox
+  - eg. Wrap around text in an excel cell (read mobile screen here.)
+
+- Grid
+  - responsive table
+  
+### Bootstrap
+- Pre-written styling code on the internet
+- eg. Alerts,table column model (with responsive version)
+
+## SaSS
+- extension of CSS to remove redundancy in code
+- Variables is a key feature
+- Needs a compiler to convert code to CSS
+  - Has auto compile on change feature
+- Allows nesting of CSS elements
+- Allows inheritance also
