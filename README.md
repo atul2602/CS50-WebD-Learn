@@ -2,4 +2,4 @@ Lets WebD
 
 # CS50 Web Development
 
-## HTML and CSS
+## 1. HTML and CSS
