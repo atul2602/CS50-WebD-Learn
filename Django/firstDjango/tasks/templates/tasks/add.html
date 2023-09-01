@@ -1,0 +1,16 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+    <h1>Add Task</h1>
+    <form action="{% url 'tasks:add' %}" method="post">
+        <input type="text" name="task">
+        <input type="submit">
+    </form>
+
+    <!-- sends data to add route, and moves to add execution -->
+
+
+    <a href="{% url 'tasks:index' %}">View Tasks</a>
+
+    <!-- namespace before colon -->
+{% endblock %}
