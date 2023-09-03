@@ -3,7 +3,9 @@
 {% block body %}
     <h1>Add Task</h1>
     <form action="{% url 'tasks:add' %}" method="post">
-        <input type="text" name="task">
+        {% csrf_token %}
+        <!-- <input type="text" name="task"> -->
+        {{ form }}
         <input type="submit">
     </form>
 
@@ -12,5 +14,6 @@
 
     <a href="{% url 'tasks:index' %}">View Tasks</a>
 
-    <!-- namespace before colon -->
+    <!-- namespace before colon, prevents namespace collision with other apps -->
+
 {% endblock %}

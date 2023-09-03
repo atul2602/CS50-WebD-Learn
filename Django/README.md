@@ -54,3 +54,22 @@ python manage.py startapp <appname>
     - create `layout.html` in templates
   - (feeling sleepy) In href, add link to the path instead of page, as it help to change the code less if path file changed
   - Namespace collision: multiple "index.html" confused it for apps, use app_name in `urls.py`
+  - ```html
+      <form action="{% url 'tasks:add' %}" method="post">
+    ```
+    action means on-click, go to that page. post method means we will sent form data to the add page
+  - Forbidden error: make the form safe using CSRF token for every session. Here, django middleware takes care of these tokens.
+
+#### Forms in Django
+- A class infrastructure to make things easy.
+- Auto client side vaildation
+- Basic HTML changes not required, makes the form control pythonic
+- Server side validation: we access _add_ page in two ways, initially via GET request, then via post request of submit. They should behave differently, as POST request should add the task to the main list. Recall, all this validation happens in _views.py_. Helps when client side page is not updated to server.
+- After submitting, we redirect the form (here) using `reverse` function to get to the desired label.
+
+- security issue with global variables, every user has same variables
+  - **sessions in django**
+  - In index views, if on first visit no tasks list is found, create an empty one for the current session
+  - `request.session` has all the data about that session/user
+  - This data is stored in a table, we need to create using _migration_ to database (next lecture)
+  - cookies are involved
