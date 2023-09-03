@@ -6,4 +6,4 @@ Lets WebD
 
 ## 2. Git
 
-## 3. 
+## 3. Django and Python
